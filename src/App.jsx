@@ -66,7 +66,7 @@ function App() {
               sum={dish.sum}
               onIncrease={() => handleIncrease(dish)}
               onDecrease={() => dispatch({
-                type: 'decrease'
+               type: 'decrease'
               })}
             />
           )
