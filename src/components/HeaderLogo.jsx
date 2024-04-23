@@ -1,21 +1,16 @@
 function HeaderLogo() {
-    const menu = ['Home', 'All restaurants'];
-
-    let links = menu.map(text => {
-        return (
-            <li key={text} className="list">
-                <a href="#">{text}</a>
-            </li>
-        )
-    })
 return (
-<header>
-    <ul>
-        {links}
-    </ul>
-</header>
+            <div>
+                <img src="public/group.png" alt=""></img>
+                <p1>Meal Drop</p1>
 
-)
+                <ul class="sh">
+                <a href="#">Home</a>
+                <a href="#">All restaurants</a>
+    
+            </ul>
+            </div>
+    )
 
-}
+    }
 export default HeaderLogo;

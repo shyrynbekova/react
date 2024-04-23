@@ -1,14 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import orderReducer from '../hooks/orderReducer'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { todoApi } from '../api/todos'
+import { orderApi } from '../api/order'
 
 export const store = configureStore({
   reducer: {
-    order: orderReducer,
-    [todoApi.reducerPath]: todoApi.reducer
+    [orderApi.reducerPath]: orderApi.reducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(todoApi.middleware),
+    getDefaultMiddleware().concat(orderApi.middleware),
 })
 setupListeners(store.dispatch)

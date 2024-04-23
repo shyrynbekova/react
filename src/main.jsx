@@ -5,7 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import { store } from './store/index.js'
 import { Provider } from 'react-redux'
-import TodosPage from './pages/TodosPage.jsx';
+// import OrdersPage from './pages/OrderPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -13,19 +13,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <div>ОШИБКА</div>,
-  },
-  {
-    path: "/categories",
-    element: <NewForm />
-  },
-  {
-    path: "/restaurants/:id",
-    element: <Details />
-  },
-  {
-    path: "/todos",
-    element: <TodosPage />
   }
+ 
 
 ]);
 
