@@ -1,19 +1,20 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query'
 import {supabase} from './index.js';
 
+
 export const orderApi = createApi ({
-    reducerPath: 'postApi',
+    reducerPath: 'orderApi',
     baseQuery: fetchBaseQuery({baseUrl:'https://jsonplaceholder.typicode.com'}),
     endpoints: (builder) => ({
         getPosts: builder.query({
             query: () => '/posts' 
         }),
-        getPOstById: builder.query({
+        getPostById: builder.query({
             query: (id) => `/posts/${id}`
         }),
         getFood: builder.query ({
             queryFn: async () => {
-                const data = await supabase.from('restaurant').select(`id`)
+                const data = await supabase.from('restaurant').select(`*`)
                 return { data: data }
             }
         }),  
@@ -21,7 +22,7 @@ export const orderApi = createApi ({
             query: ({ body }) => ({
                 url: `/post`,
                 method: 'POST',
-                body
+                body,
 
             })
         }),
@@ -40,13 +41,21 @@ export const orderApi = createApi ({
                       house_number: house_number,  
                       zip_code:zip_code,
                     city: city, 
-                    meal_ids: meal_ids
-                    }
-                ])
+                    meal_ids: meal_ids,
+                },
+            ])
+            .select()
+
+            if (error) {
+                throw new Error(error)
             }
+                return{result: data }
+            },
             })
         })       
-)
+    })
         
-        
+     
+    export const { useGetPostsQuery, useGetPostByIdQuery, useGetFoodQuery,
+        useAddPostMutation, useCreateOrderMutation } = orderApi;
        

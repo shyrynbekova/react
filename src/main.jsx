@@ -7,6 +7,7 @@ import { store } from './store/index.js'
 import { Provider } from 'react-redux'
 import CategoriesPage from './pages/Categories.jsx';
 import BaseButton from './components/BaseButton.jsx';
+import RestaurantCard from './components/RestaurantCard.jsx';
 
 
 

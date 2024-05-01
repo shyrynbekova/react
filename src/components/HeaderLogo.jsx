@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import logoIcon from '/logo.png'
 import korzinkaIcon from '/icon.svg'
 
+
 function HeaderLogo() {
 return (
     <header className='header'>

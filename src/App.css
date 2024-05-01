@@ -33,8 +33,21 @@
   border-radius: 4px;
 
 }
+
+.restaurant-list {
+  margin-top: 72px;
+}
+
 .list-conteiner {
+  overflow: auto;
   display: flex;
+  gap: 23px;
+
+}
+.ticker {
+  height: 487px;
+  overflow-y: hidden;
+
 }
 
  

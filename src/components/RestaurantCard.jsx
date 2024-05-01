@@ -1,4 +1,5 @@
 import starIcon from '/Star.svg'
+// import RestaurantList from "./ResraurantList"
 
 function RestaurantCard({ name, rating, photoUrl, specialty, categories }) {
     let listCategories = categories.map(category => <li key={category}>{category}</li>)
