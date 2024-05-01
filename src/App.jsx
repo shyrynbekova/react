@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import OrderModal from './components/OrderModal';
 import HeaderLogo from './components/HeaderLogo';
+import HeroSection from './components/HeroSection';
+import BaseButton from './components/BaseButton';
 
 function App() {
  
@@ -50,6 +52,8 @@ function App() {
   return (
     <div> 
        <HeaderLogo/>
+       <HeroSection/>
+       <BaseButton/>
     </div>
   )
 }

@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { orderApi } from '../api/order'
+import { postApi } from '../api/post'
 
 export const store = configureStore({
   reducer: {
-    [orderApi.reducerPath]: orderApi.reducer
+    [postApi.reducerPath]: postApi.reducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(orderApi.middleware),
+    getDefaultMiddleware().concat(postApi.middleware),
 })
 setupListeners(store.dispatch)

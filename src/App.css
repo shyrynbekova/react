@@ -1,4 +1,40 @@
-.sh {
-   font-size: 30px;
-   color: red;
+* {
+  margin: 0;
+  pading: 0;
 }
+
+.header {
+  padding-left: 65px;
+  padding-right: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+ .logo-conteiner {
+  display: flex; 
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;  
+ }
+
+ .hero {
+  background-color:#B1DDE4 ;
+  text-align: center;
+  padding-top: 130px;
+ }
+ .hero img  {
+  width: 100%;
+ }
+.main-btn {
+  background-color: black;
+  color: white;
+  padding: 13px 24px;
+  border-radius: 4px;
+
+}
+.list-conteiner {
+  display: flex;
+}
+
+ 
